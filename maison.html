@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maison Sucrée - Pastelería </title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fuente Cinzel -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <!-- Iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary-pink: #FF69B4;
+      --black-bg: #1a1a1a;
+      --light-pink: #FFB6C1;
+    }
+
+    body {
+      background-color: var(--black-bg);
+      color: white;
+      font-family: 'Cinzel', serif;
+    }
+
+    .map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+    }
+
+
+    .navbar {
+      background-color: var(--black-bg) !important;
+      border-bottom: 2px solid var(--primary-pink);
+    }
+
+    .nav-link {
+      color: var(--light-pink) !important;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-pink) !important;
+    }
+
+    .product-card {
+      background: #2a2a2a;
+      border: 1px solid var(--primary-pink);
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      border-color: var(--light-pink);
+    }
+
+    .product-img {
+  width: 100%;
+  height: 400px; /* o el alto que tú quieras */
+  object-fit: cover;
+  object-position: center; /* Asegura que el centro del producto se muestre */
+  border-bottom: 2px solid var(--primary-pink);
+}
+
+
+    .btn-pink {
+      background-color: var(--primary-pink);
+      color: black;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-pink:hover {
+      background-color: var(--light-pink);
+      color: black;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-pink);
+      color: black;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: none;
+    }
+
+    .back-to-top.show {
+      display: inline-block;
+    }
+
+    .hero-section {
+      padding: 5rem 1rem;
+      text-align: center;
+      background-color: #111;
+    }
+
+
+    .hero-section h2 {
+      color: var(--primary-pink);
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-section p {
+      color: var(--light-pink);
+      font-size: 1.25rem;
+    }
+
+    .social-icons a {
+      color: var(--light-pink);
+      font-size: 1.8rem;
+      margin: 0 10px;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary-pink);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="d-flex w-100 align-items-center justify-content-between">
+        <!-- Nombre a la izquierda -->
+        <div class="d-flex align-items-center">
+          <span class="navbar-text" style="color: var(--primary-pink); font-weight: bold; font-size: 1.5rem;">
+            Maison Sucrée
+          </span>
+        </div>
+  
+        <!-- Logo al centro -->
+        <div class="mx-auto text-center">
+          <a class="navbar-brand" href="#">
+            <img src="imagenes/logo-4.png" alt="Maison Sucrée" style="height:100px;">
+          </a>
+        </div>
+  
+        <!-- Botón hamburguesa y links a la derecha -->
+        <div class="d-flex">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <h2>La Mejor Pasteleria de la Ciudad</h2>
+      <p>Hechos con amor y los mejores ingredientes</p>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-md-4">
+          <div class="product-card card">
+            <img src="imagenes/pastel-1.jpg" class="card-img-top product-img" alt="Pastel de Chocolate" />
+            <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$6.000.000</h5>
+              <p class="card-text text-light">Delicioso pastel de triple chocolate</p>
+              <button class="btn btn-pink">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-4">
+          <div class="product-card card">
+            <img src="imagenes/pastel-2.jpg" class="card-img-top product-img" alt="Dulces" />
+            <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$500.000</h5>
+              <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+              <button class="btn btn-pink">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-4">
+          <div class="product-card card">
+            <img src="imagenes/pastel--3.jpg" class="card-img-top product-img" alt="Pasteles Creativos" />
+            <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$20.000.000</h5>
+              <p class="card-text text-light">Al gusto del cliente</p>
+              <button class="btn btn-pink">Comprar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-4.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$700.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-5.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$99.000.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-6.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$1.000.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 7 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-7.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$440.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-8.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$300.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 9 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-9.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$999.999</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-10.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$10.000.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-11.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$200.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-12.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$500.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 13 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-13.jpeg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$5.000.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 14 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-14.jpeg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$200.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 15 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-15.jpeg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$890.500</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 16 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-16.jpeg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$222.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 17 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-17.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$55.000.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 18 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-18.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$9.999.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 19 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-19.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$1000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+       </div>
+
+          <!-- Producto 20 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-20.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$9000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 21 -->
+        <div class="col-md-4">
+            <div class="product-card card">
+              <img src="imagenes/pastel-21.jpg" class="card-img-top product-img" alt="Dulces" />
+              <div class="card-body text-center">
+                <h5 class="card-title" style="color: #FF69B4;">$10.000</h5>
+                <p class="card-text text-light">Variedad de sabores y decoraciones</p>
+                <button class="btn btn-pink">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-5 bg-dark text-center text-light">
+    <div class="container">
+      <h3>Contacto</h3>
+      <p>Email: Fabinaconazucar@maisonsucree.cl</p>
+      <p>Teléfono: +56 9 6686 2005</p>
+      <div class="mt-4">
+        <iframe 
+  class="map" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53263.04825110962!2d-70.58744843046874!3d-33.45085625578307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf8f95d3b4f5%3A0x761fb1014702b425!2smaison%20sucr%C3%A8e!5e0!3m2!1ses!2scl!4v1750017249356!5m2!1ses!2scl" 
+  width="100%" 
+  height="500" 
+  style="border:0;" 
+  allowfullscreen 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+<div style="text-align: center; margin-top: 10px; color: white; font-weight: bold; font-size: 1.2rem;">
+  ¡Visítanos en nuestra tienda!
+</div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center" style="background: #111;">
+    <div class="container">
+      <p style="color: var(--primary-pink); margin: 0;">© 2025 Maison Sucrée - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <a href="#inicio" class="back-to-top" id="backToTop">↑</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
